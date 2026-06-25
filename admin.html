@@ -302,7 +302,7 @@
         .sig-line { border-top: 1px solid #000000; width: 90%; margin: 0 auto 5px auto; }
 
         .undertaking-title-container { text-align: center; margin: 15px 0 20px 0; }
-        .undertaking-text-block { font-size: 11pt; line-height: 1.6; color: #000; font-weight: bold; } /* পুরো অঙ্গীকারনামা বোল্ড করার জন্য */
+        .undertaking-text-block { font-size: 11pt; line-height: 1.6; color: #000; font-weight: bold; }
         .undertaking-row { display: flex; align-items: flex-start; margin-bottom: 8px; text-align: justify; }
         .undertaking-num { width: 25px; flex-shrink: 0; font-weight: bold; }
 
@@ -313,12 +313,41 @@
             border: 2px solid #000000; padding: 4px 30px; font-size: 11.5pt; font-weight: bold; border-radius: 20px;
         }
 
+        /* প্রিন্ট অপশন ফিক্সড করার সংশোধিত সিএসএস */
         @media print {
-            body * { visibility: hidden; }
-            .modal-overlay { position: absolute; left: 0; top: 0; display: flex !important; background: none; }
-            #printableModalArea, #printableModalArea * { visibility: visible; }
-            #printableModalArea { position: absolute; left: 0; top: 0; width: 210mm; box-shadow: none; padding: 12mm 15mm; }
-            .modal-close-bar { display: none; }
+            body {
+                background-color: #fff !important;
+                color: #000 !important;
+            }
+            body * { 
+                visibility: hidden; 
+            }
+            .modal-overlay { 
+                position: absolute !important; 
+                left: 0 !important; 
+                top: 0 !important; 
+                width: 100% !important;
+                height: auto !important;
+                display: flex !important; 
+                background: none !important; 
+                overflow: visible !important;
+            }
+            #printableModalArea, #printableModalArea * { 
+                visibility: visible; 
+            }
+            #printableModalArea { 
+                position: absolute !important; 
+                left: 0 !important; 
+                top: 0 !important; 
+                width: 210mm !important; 
+                height: auto !important;
+                box-shadow: none !important; 
+                padding: 12mm 15mm !important; 
+                overflow: visible !important;
+            }
+            .modal-close-bar { 
+                display: none !important; 
+            }
             
             .view-field {
                 border: none !important;
@@ -329,8 +358,14 @@
                 height: auto !important;
                 display: inline-block !important;
             }
-            .edit-input { border: none !important; background: transparent !important; }
-            .page-break { page-break-after: always; }
+            .edit-input { 
+                border: none !important; 
+                background: transparent !important; 
+            }
+            .page-break { 
+                page-break-after: always !important; 
+                break-after: page !important;
+            }
         }
     </style>
 </head>
@@ -407,7 +442,7 @@
                             <img src="logo.png" alt="Logo" class="top-logo" onerror="this.style.display='none';">
                         </div>
                         <div class="header-text">
-                            <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+                            <div class="bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
                             <h1>মফিজউদ্দিন পুনর্বাসন কেন্দ্র ও এতিমখানা</h1>
                             <div class="subtitle">(আজাদ ফাউন্ডেশন বাংলাদেশ এর একটি প্রতিষ্ঠান)</div>
                             <div class="address">ধানাইদহ, বড়াইগ্রাম, নাটোর।</div>
@@ -508,16 +543,14 @@
                         <div class="form-group" style="flex: 1.5;"><label>মোবাইল ঃ</label><div class="view-field width-large" id="m_guardian_mobile"></div></div>
                     </div>
 
-                    <!-- ফি সেকশন -->
-                    <div class="form-row" style="margin-top: 5px; justify-content: space-between; gap: 10px;">
+                    <div class="form-row" style="margin-top: 8px; justify-content: space-between; gap: 10px;">
                         <div class="form-group"><label>সেশন ফিঃ</label><div class="view-field width-small" id="m_session_fee"></div></div>
                         <div class="form-group"><label>বিদ্যুৎ বিলঃ</label><div class="view-field width-small" id="m_electricity_bill"></div></div>
-                        <div class="form-group""><label>ভর্তি ফিঃ</label><div class="view-field width-small" id="m_admission_fee"></div></div>
-                        <div class="form-group"><label>মাসিক বেতনঃ</label><div class="view-field width-small" id="m_monthly_fee"></div></div>
+                        <div class="form-group"><label>ভর্তি ফিঃ</label><div class="view-field width-small" id="m_admission_fee"></div></div>
+                        <div class="form-group"><label>মাসিক বেতন ঃ</label><div class="view-field width-small" id="m_monthly_fee"></div></div>
                         <div class="form-group"><label>খোরাকীঃ</label><div class="view-field width-small" id="m_food_fee"></div></div>
                     </div>
 
-                    <!-- অফিস বক্স -->
                     <div class="office-box" style="margin-top: 8px;">
                         <div class="office-title-container"><div class="office-title">অফিস কর্তৃক পূরণীয়</div></div>
                         <div class="form-row" style="gap: 10px;">
@@ -537,7 +570,6 @@
                     </div>
                 </div>
 
-                <!-- অঙ্গীকার নামা পেজ (সব লেখা এখন বোল্ড) -->
                 <div class="page-p2">
                     <div class="undertaking-title-container"><div class="form-title" style="padding: 5px 40px; font-size: 14pt;">অঙ্গীকার নামা</div></div>
                     <div class="undertaking-text-block">
@@ -575,7 +607,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 
     <script>
-        // ফায়ারবেস কনফিগ
+        // ফায়ারবেস কনфিগ
         const firebaseConfig = {
              apiKey: "AIzaSyCR5GBRH7x7APnjfAbvRj8WPe84B1Sbs-0",
              authDomain: "mofizuzzin-ro-center.firebaseapp.com",
