@@ -77,7 +77,6 @@
 
         /* মূল ড্যাশবোর্ড লেআউট */
         .admin-container {
-            display: none; 
             display: flex;
             min-height: 100vh;
         }
@@ -209,13 +208,12 @@
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.5);
-            display: flex;
+            display: none;
             justify-content: center;
             align-items: flex-start;
             overflow-y: auto;
             padding: 20px;
             z-index: 1000;
-            display: none;
         }
 
         .modal-body {
@@ -252,13 +250,15 @@
         .header-right-side { width: 35mm; display: flex; justify-content: flex-end; align-items: center; flex-shrink: 0; }
         
         .photo-box-container {
-            width: 32mm; height: 38mm; border: 2px solid #000000;
+            width: 32mm;
+            height: 38mm; border: 2px solid #000000;
             text-align: center; background-color: #fff; overflow: hidden; position: relative;
         }
 
         .section-title-container { text-align: center; margin: 15px 0 10px 0; width: 100%; }
         .form-title {
-            background-color: transparent; color: #000000; border: 2px solid #000000;
+            background-color: transparent;
+            color: #000000; border: 2px solid #000000;
             display: inline-block; padding: 3px 25px; border-radius: 20px; font-size: 12pt; font-weight: bold;
         }
 
@@ -268,13 +268,16 @@
         .full-width-group { width: 100%; display: flex; align-items: center; }
 
         .view-field {
-            padding: 2px 5px; border: 1px solid #000000; border-radius: 3px;
+            padding: 2px 5px;
+            border: 1px solid #000000; border-radius: 3px;
             font-size: 10.5pt; font-weight: bold; background-color: #fff;
-            margin-left: 5px; height: 26px; display: flex; align-items: center; color: #000;
+            margin-left: 5px; height: 26px; display: flex; align-items: center;
+            color: #000;
         }
 
         .edit-input {
-            width: 100%; height: 100%; border: none; outline: none;
+            width: 100%;
+            height: 100%; border: none; outline: none;
             font-family: 'SolaimanLipi', sans-serif; font-size: 10.5pt; font-weight: bold;
         }
 
@@ -289,7 +292,8 @@
         .office-box { border: 2px solid #000000; padding: 10px; border-radius: 5px; margin-top: 10px; }
         .office-title-container { text-align: center; margin-bottom: 10px; width: 100%; }
         .office-title {
-            background-color: transparent; color: #000000; border: 1.5px solid #000000;
+            background-color: transparent;
+            color: #000000; border: 1.5px solid #000000;
             display: inline-block; padding: 2px 20px; font-size: 10.5pt; font-weight: bold; border-radius: 15px;
         }
 
@@ -298,13 +302,14 @@
         .sig-line { border-top: 1px solid #000000; width: 90%; margin: 0 auto 5px auto; }
 
         .undertaking-title-container { text-align: center; margin: 15px 0 20px 0; }
-        .undertaking-text-block { font-size: 11pt; line-height: 1.6; color: #000; }
+        .undertaking-text-block { font-size: 11pt; line-height: 1.6; color: #000; font-weight: bold; } /* পুরো অঙ্গীকারনামা বোল্ড করার জন্য */
         .undertaking-row { display: flex; align-items: flex-start; margin-bottom: 8px; text-align: justify; }
         .undertaking-num { width: 25px; flex-shrink: 0; font-weight: bold; }
 
         .footer-blessing { text-align: center; margin-top: 30px; }
         .blessing-box {
-            display: inline-block; background-color: transparent; color: #000000;
+            display: inline-block;
+            background-color: transparent; color: #000000;
             border: 2px solid #000000; padding: 4px 30px; font-size: 11.5pt; font-weight: bold; border-radius: 20px;
         }
 
@@ -402,7 +407,7 @@
                             <img src="logo.png" alt="Logo" class="top-logo" onerror="this.style.display='none';">
                         </div>
                         <div class="header-text">
-                            <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰনِ الرَّحِيمِ</div>
+                            <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
                             <h1>মফিজউদ্দিন পুনর্বাসন কেন্দ্র ও এতিমখানা</h1>
                             <div class="subtitle">(আজাদ ফাউন্ডেশন বাংলাদেশ এর একটি প্রতিষ্ঠান)</div>
                             <div class="address">ধানাইদহ, বড়াইগ্রাম, নাটোর।</div>
@@ -452,7 +457,7 @@
                     </div>
 
                     <div class="form-row">
-                        <div class="form-group" style="flex: 1;"><label>৬। স্থায়ী ঠিকানা ঃ গ্রাম ঃ</label><div class="view-field flex-fill" id="m_student_village"></div></div>
+                        <div class="form-group" style="flex: 1.2;"><label>৬। স্থায়ী ঠিকানা ঃ গ্রাম ঃ</label><div class="view-field flex-fill" id="m_student_village"></div></div>
                         <div class="form-group" style="flex: 1;"><label>ডাকঘর ঃ</label><div class="view-field flex-fill" id="m_student_post"></div></div>
                         <div class="form-group" style="flex: 1;"><label>উপজেলা ঃ</label><div class="view-field flex-fill" id="m_student_upazila"></div></div>
                     </div>
@@ -478,11 +483,11 @@
 
                     <div class="form-row" style="margin-top: 25px; justify-content: space-between;">
                         <div class="form-group"><label>তারিখ ঃ</label><div class="view-field width-large" id="m_application_date"></div></div>
-                        <div class="form-group" style="flex: 0 0 180px; margin-top: 35px;"><span style="border-top: 1px solid #000; width: 100%; display: inline-block; text-align: center;">ছাত্রের স্বাক্ষর</span></div>
+                        <div class="form-group" style="flex: 0 0 180px; margin-top: 35px;"><span style="border-top: 1px solid #000; width: 100%; display: inline-block; text-align: center; font-weight: bold;">ছাত্রের স্বাক্ষর</span></div>
                     </div>
 
                     <div class="form-row" style="margin-top: 10px;">
-                        <div class="form-group" style="flex: 1.5;"><label>অভিভাবকের নাম ঃ</label><div class="view-field flex-fill" id="m_guardian_name"></div></div>
+                        <div class="form-group" style="flex: 2.2;"><label>১০। অভিভাবকের নাম ঃ</label><div class="view-field flex-fill" id="m_guardian_name"></div></div>
                         <div class="form-group" style="flex: 1;"><label>সম্পর্ক ঃ</label><div class="view-field flex-fill" id="m_guardian_relation"></div></div>
                         <div class="form-group" style="flex: 1;"><label>পেশা ঃ</label><div class="view-field flex-fill" id="m_guardian_profession"></div></div>
                     </div>
@@ -494,7 +499,7 @@
                     </div>
 
                     <div class="form-row">
-                        <div class="form-group" style="flex: 1;"><label>স্থায়ী ঠিকানা ঃ গ্রাম ঃ</label><div class="view-field flex-fill" id="m_guardian_village"></div></div>
+                        <div class="form-group" style="flex: 1.2;"><label>স্থায়ী ঠিকানা ঃ গ্রাম ঃ</label><div class="view-field flex-fill" id="m_guardian_village"></div></div>
                         <div class="form-group" style="flex: 1;"><label>ডাকঘর ঃ</label><div class="view-field flex-fill" id="m_guardian_post"></div></div>
                         <div class="form-group" style="flex: 1;"><label>উপজেলা ঃ</label><div class="view-field flex-fill" id="m_guardian_upazila"></div></div>
                     </div>
@@ -503,20 +508,22 @@
                         <div class="form-group" style="flex: 1.5;"><label>মোবাইল ঃ</label><div class="view-field width-large" id="m_guardian_mobile"></div></div>
                     </div>
 
-                    <div class="form-row" style="margin-top: 12px; justify-content: space-between; gap: 5px;">
-                        <div class="form-group"><label>সেশন ফি ঃ</label><div class="view-field width-small" id="m_session_fee"></div></div>
-                        <div class="form-group"><label>বিদ্যুৎ বিল ঃ</label><div class="view-field width-small" id="m_electricity_bill"></div></div>
-                        <div class="form-group"><label>ভর্তি ফি ঃ</label><div class="view-field width-small" id="m_admission_fee"></div></div>
-                        <div class="form-group"><label>মাসিক বেতন ঃ</label><div class="view-field width-small" id="m_monthly_fee"></div></div>
-                        <div class="form-group"><label>খোরাকী ঃ</label><div class="view-field width-small" id="m_food_fee"></div></div>
+                    <!-- ফি সেকশন -->
+                    <div class="form-row" style="margin-top: 5px; justify-content: space-between; gap: 10px;">
+                        <div class="form-group"><label>সেশন ফিঃ</label><div class="view-field width-small" id="m_session_fee"></div></div>
+                        <div class="form-group"><label>বিদ্যুৎ বিলঃ</label><div class="view-field width-small" id="m_electricity_bill"></div></div>
+                        <div class="form-group""><label>ভর্তি ফিঃ</label><div class="view-field width-small" id="m_admission_fee"></div></div>
+                        <div class="form-group"><label>মাসিক বেতনঃ</label><div class="view-field width-small" id="m_monthly_fee"></div></div>
+                        <div class="form-group"><label>খোরাকীঃ</label><div class="view-field width-small" id="m_food_fee"></div></div>
                     </div>
 
+                    <!-- অফিস বক্স -->
                     <div class="office-box" style="margin-top: 8px;">
                         <div class="office-title-container"><div class="office-title">অফিস কর্তৃক পূরণীয়</div></div>
                         <div class="form-row" style="gap: 10px;">
-                            <div class="form-group" style="flex:1;"><label>পরীক্ষকের নাম :</label><div class="view-field flex-fill" id="m_office_examiner"></div></div>
-                            <div class="form-group" style="flex:1;"><label>পরীক্ষার ফলাফল :</label><div class="view-field flex-fill" id="m_office_result"></div></div>
-                            <div class="form-group" style="flex:1;"><label>বার্ষিক পরীক্ষার ফলাফল :</label><div class="view-field flex-fill" id="m_office_annual_result"></div></div>
+                            <div class="form-group" style="flex: 1.4;"><label>পরীক্ষকের নাম :</label><div class="view-field flex-fill" id="m_office_examiner"></div></div>
+                            <div class="form-group" style="flex: 1;"><label>পরীক্ষার ফলাফল :</label><div class="view-field flex-fill" id="m_office_result"></div></div>
+                            <div class="form-group" style="flex: 1.2;"><label>বার্ষিক পরীক্ষার ফলাফল :</label><div class="view-field flex-fill" id="m_office_annual_result"></div></div>
                         </div>
                         <div class="form-row" style="margin-top: 10px;">
                             <label>উল্লেখিত তথ্যের ভিত্তিতে </label><div class="view-field width-medium" id="m_approved_class" style="justify-content: center;"></div><label style="margin-left: 5px;"> শ্রেণীতে ভর্তির অনুমতি প্রদান করা গেল।</label>
@@ -524,12 +531,13 @@
                     </div>
 
                     <div class="signatures" style="margin-top: 45px;">
-                        <div class="sig-cell"><div class="sig-line"></div><label>ناজেমে তালীমাতের স্বাক্ষর</label></div>
+                        <div class="sig-cell"><div class="sig-line"></div><label>নাজেমে তালীমাতের স্বাক্ষর</label></div>
                         <div class="sig-cell"></div>
                         <div class="sig-cell"><div class="sig-line"></div><label>প্রধান শিক্ষকের স্বাক্ষর</label></div>
                     </div>
                 </div>
 
+                <!-- অঙ্গীকার নামা পেজ (সব লেখা এখন বোল্ড) -->
                 <div class="page-p2">
                     <div class="undertaking-title-container"><div class="form-title" style="padding: 5px 40px; font-size: 14pt;">অঙ্গীকার নামা</div></div>
                     <div class="undertaking-text-block">
@@ -537,7 +545,7 @@
                             <div class="undertaking-num">১।</div>
                             <div style="width: 100%;">আমি <div class="view-field" id="m_undertaking_name" style="width: 250px; display: inline-flex;"></div> বাংলাদেশের একজন নাগরিক। আমি সমাজ ও রাষ্ট্রবিরোধী কোন কর্মকাণ্ডে অংশগ্রহণ করবো না।</div>
                         </div>
-                        <div class="undertaking-row"><div class="undertaking-num">২।</div><div>প্রতিষ্ঠানের একজন সদস্য হিসাবে প্রতিষ্ঠানের যাবতীয় আইন-কানুন মেনে চলবো।</div></div>
+                        <div class="undertaking-row"><div class="undertaking-num">২।</div><div>প্রতিষ্ঠানের একজন member হিসাবে প্রতিষ্ঠানের যাবতীয় আইন-কানুন মেনে চলবো।</div></div>
                         <div class="undertaking-row"><div class="undertaking-num">৩।</div><div>প্রতিষ্ঠানের সদস্য ও প্রতিবেশীর সম্মান প্রদর্শন ও সদাচারে সচেষ্ট থাকবো।</div></div>
                         <div class="undertaking-row"><div class="undertaking-num">৪।</div><div>কোন প্রকার অবৈধ জিনিস নিয়ে প্রতিষ্ঠানে প্রবেশ করবো না এবং কেউ দিলে রাখবো না।</div></div>
                         <div class="undertaking-row"><div class="undertaking-num">৫।</div><div>গোনাহের কোন কাজ করব না এবং গোনাহের কাজে কাউকে প্রশ্রয় দেবো না।</div></div>
@@ -567,7 +575,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 
     <script>
-        // ফায়ারবেস কনফিগ (আপনার আসল ডাটা বসাবেন)
+        // ফায়ারবেস কনফিগ
         const firebaseConfig = {
              apiKey: "AIzaSyCR5GBRH7x7APnjfAbvRj8WPe84B1Sbs-0",
              authDomain: "mofizuzzin-ro-center.firebaseapp.com",
@@ -584,7 +592,6 @@
         let currentEditingKey = ""; 
         let allApplicantsData = {};
 
-        // পেজ লোড হবার সময় অথেনটিকেশন সেশন চেক করা
         window.onload = function() {
             firebase.auth().onAuthStateChanged((user) => {
                 if (user) {
@@ -595,7 +602,6 @@
             });
         };
 
-        // ফায়ারবেস অথেনটিকেশন দিয়ে লগইন করার ফাংশন
         function handleLogin() {
             const emailInput = document.getElementById("username").value.trim();
             const passwordInput = document.getElementById("password").value.trim();
@@ -609,10 +615,9 @@
             loginBtn.innerText = "যাচাই করা হচ্ছে...";
             loginBtn.disabled = true;
 
-            // Firebase Auth Sign In
             firebase.auth().signInWithEmailAndPassword(emailInput, passwordInput)
             .then((userCredential) => {
-                loginBtn.innerText = "প্রवेश করুন";
+                loginBtn.innerText = "প্রবেশ করুন";
                 loginBtn.disabled = false;
                 showDashboard();
             })
@@ -631,7 +636,6 @@
             });
         }
 
-        // লগআউট ফাংশন
         function handleLogout() {
             if(confirm("আপনি কি নিশ্চিতভাবে লগ আউট করতে চান?")) {
                 firebase.auth().signOut().then(() => {
@@ -655,7 +659,6 @@
             loadFirebaseData();
         }
 
-        // ফায়ারবেস ডাটা লোড ও টেবিল তৈরি
         function loadFirebaseData() {
             database.ref('applicants').on('value', (snapshot) => {
                 const tbody = document.getElementById('applicantsTableBody');
@@ -693,7 +696,6 @@
             });
         }
 
-        // মোডাল ভিউ অথবা এডিট মোডে ওপেন করার ফাংশন
         function openModal(key, mode) {
             const data = allApplicantsData[key];
             if(!data) return;
@@ -776,13 +778,11 @@
             }
 
             document.getElementById('viewModal').style.display = 'flex';
-            document.body.style.overflow = 'hidden'; 
+            document.body.style.overflow = 'hidden';
         }
 
-        // এডিট করা ডাটা ফায়ারবেসে আপডেট/সেভ করার ফাংশন
         function saveEditedData() {
             if(!currentEditingKey) return;
-
             function getVal(id) {
                 const el = document.getElementById("input_" + id);
                 return el ? el.value : "";
